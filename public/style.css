@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #121212;
+  color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #1e1e1e;
+  padding: 1rem 2rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  color: #66ccff;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 2rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+.controls input,
+.controls select,
+.controls button {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+.controls input,
+.controls select {
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
+.controls button {
+  background-color: #66ccff;
+  color: #000;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.controls button:hover {
+  background-color: #33bbff;
+}
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+}
+
+@media (max-width: 1200px) {
+  .chart-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 800px) {
+  .chart-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 500px) {
+  .chart-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.chart-card {
+  background-color: #1f1f1f;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s;
+  width: 100%;
+  max-width: 100%;
+}
+
+.chart-card:hover {
+  transform: translateY(-4px);
+}
+
+.chart-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #66ccff;
+  text-align: center;
+}
+
+footer {
+  margin-top: auto;
+  text-align: center;
+  padding: 1rem;
+  background-color: #1e1e1e;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.chart-card p {
+  text-align: center;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  font-weight: bold;
+}
+

@@ -535,7 +535,7 @@
 
     function fetchUSStock(symbol, range) {
       const [interval] = getIntervalFromRange(range);
-      const url = `https://api.twelvedata.com/time_series?symbol=${symbol}&interval=${interval}&outputsize=100&apikey=${apiKey}`;
+      const url = `/api/price?symbol=${symbol}&interval=${interval}`;
       fetch(url)
         .then(res => res.json())
         .then(data => {
