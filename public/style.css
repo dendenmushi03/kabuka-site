@@ -63,7 +63,31 @@ header h1 {
   grid-template-columns: repeat(5, 1fr);
   gap: 2rem;
   padding: 2rem;
-  box-sizing: border-box;
+  justify-items: center; /* 中央寄せ */
+}
+
+@media (max-width: 1200px) {
+  .chart-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .chart-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .chart-grid {
+    grid-template-columns: repeat(2, 1fr); /* スマホ2列に固定 */
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .chart-card {
+    max-width: unset; /* 幅制限を解除して2列表示をぴったりに */
+  }
 }
 
 .chart-card {
@@ -72,7 +96,12 @@ header h1 {
   padding: 1rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
   width: 100%;
+  max-width: 180px;
   box-sizing: border-box;
+}
+
+.chart-card:hover {
+  transform: translateY(-4px);
 }
 
 .chart-card h2 {
@@ -89,10 +118,6 @@ header h1 {
   font-weight: bold;
 }
 
-.chart-card:hover {
-  transform: translateY(-4px);
-}
-
 footer {
   margin-top: auto;
   text-align: center;
@@ -100,41 +125,4 @@ footer {
   background-color: #1e1e1e;
   color: #777;
   font-size: 0.9rem;
-}
-
-/* 💥 最重要：スマホ時にぴったり2列配置 */
-@media (max-width: 500px) {
-  .chart-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-    padding: 8px;
-  }
-
-  .chart-card {
-    max-width: 100%;
-    padding: 0.5rem;
-    border-radius: 8px;
-  }
-}
-
-/* 🎯 チャート下のリンクボタンを美しく */
-.back-link {
-  text-align: center;
-  margin: 2rem auto;
-}
-
-.back-link a {
-  display: inline-block;
-  padding: 0.6rem 1.2rem;
-  font-size: 1rem;
-  font-weight: bold;
-  background-color: #66ccff;
-  color: #000;
-  border-radius: 10px;
-  text-decoration: none;
-  transition: background-color 0.3s;
-}
-
-.back-link a:hover {
-  background-color: #33bbff;
 }
