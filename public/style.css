@@ -80,13 +80,14 @@ header h1 {
 
 @media (max-width: 500px) {
   .chart-grid {
-    grid-template-columns: repeat(2, 1fr); /* スマホ2列に固定 */
-    gap: 1rem;
-    padding: 1rem;
+    padding: 0 4px;
+    gap: 4px;
   }
 
   .chart-card {
-    max-width: unset; /* 幅制限を解除して2列表示をぴったりに */
+    max-width: none;
+    width: 100%;
+    box-sizing: border-box;
   }
 }
 
