@@ -21,49 +21,11 @@ header h1 {
   color: #66ccff;
 }
 
-.controls {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-  padding: 2rem;
-  max-width: 600px;
-  margin: auto;
-}
-
-.controls input,
-.controls select,
-.controls button {
-  padding: 0.6rem 1rem;
-  font-size: 1rem;
-  border-radius: 6px;
-  border: none;
-  outline: none;
-}
-
-.controls input,
-.controls select {
-  background-color: #2a2a2a;
-  color: #fff;
-}
-
-.controls button {
-  background-color: #66ccff;
-  color: #000;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-.controls button:hover {
-  background-color: #33bbff;
-}
-
 .chart-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 2rem;
   padding: 2rem;
-  justify-items: center; /* 中央寄せ */
 }
 
 @media (max-width: 1200px) {
@@ -71,22 +33,16 @@ header h1 {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-
 @media (max-width: 800px) {
   .chart-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
 @media (max-width: 500px) {
   .chart-grid {
-    grid-template-columns: repeat(2, 1fr); /* スマホ2列に固定 */
+    grid-template-columns: repeat(2, 1fr); /* ←2列に */
     gap: 1rem;
     padding: 1rem;
-  }
-
-  .chart-card {
-    max-width: unset; /* 幅制限を解除して2列表示をぴったりに */
   }
 }
 
@@ -98,6 +54,12 @@ header h1 {
   width: 100%;
   max-width: 180px;
   box-sizing: border-box;
+}
+
+@media (max-width: 500px) {
+  .chart-card {
+    max-width: unset; /* ←スマホ時は制限なし */
+  }
 }
 
 .chart-card:hover {
@@ -116,6 +78,30 @@ header h1 {
   font-size: 1rem;
   margin: 0.5rem 0;
   font-weight: bold;
+}
+
+.back-link {
+  display: flex;
+  justify-content: center;
+  margin: 1rem auto 2rem;
+}
+
+.back-link a {
+  background-color: #66ccff;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.back-link a:hover {
+  background-color: #33bbff;
 }
 
 footer {
