@@ -127,3 +127,25 @@ footer {
   color: #777;
   font-size: 0.9rem;
 }
+
+.styled-button {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: #66ccff;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  font-size: 1rem;
+}
+
+.styled-button:hover {
+  background-color: #33bbff;
+}
+
+.back-link {
+  text-align: center;
+  margin: 2rem 0;
+}
+
